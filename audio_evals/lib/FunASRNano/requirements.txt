@@ -1,0 +1,6 @@
+funasr==1.4.1
+huggingface_hub
+soundfile
+torch==2.5.1
+torchaudio==2.5.1
+transformers==4.57.6
