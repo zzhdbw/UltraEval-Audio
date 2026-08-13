@@ -35,6 +35,8 @@ UltraEval-Audio——全球首个同时支持语音理解和语音生成评估�
 
 # 更新日志🔥
 
+- [2026/08/12]
+  - 支持 **[Fun-ASR-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512)** 评测（`fun-asr-nano-2512`），通过固定版本的隔离 FunASR 运行时加载。
 - [2026/07/31]
   - 支持 **[MOSS-TTS-v1.5](replication/moss-tts-v1.5.md)** 评测（`moss-tts-v1.5`），覆盖 Seed-TTS-Eval、CV3 zero-shot 以及 MiniMax 多语言 TTS Benchmark（22 种语言）
 - [2026/07/27]
@@ -194,6 +196,9 @@ python audio_evals/main.py --dataset sample --model gemini-pro
 # 测试 Qwen3-ASR 语音识别能力
 CUDA_VISIBLE_DEVICES=0 python audio_evals/main.py --dataset librispeech-test-clean --model qwen3-asr-1.7b --prompt simple-asr
 # 完整复现结果和命令见：replication/qwen3_asr.md
+
+# 测试 Fun-ASR-Nano 多语言语音识别能力
+CUDA_VISIBLE_DEVICES=0 python audio_evals/main.py --dataset librispeech-test-clean --model fun-asr-nano-2512 --prompt simple-asr
 
 # 测试qwen2-audio-offline语音理解能力
 CUDA_VISIBLE_DEVICES=0 python audio_evals/main.py --dataset sample --model qwen2-audio-chat

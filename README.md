@@ -35,6 +35,8 @@ UltraEval-Audio — The world's first open-source framework supporting both spee
 
 # Changelog🔥
 
+- [2026/08/12]
+  - Support **[Fun-ASR-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512)** evaluation (`fun-asr-nano-2512`) through a pinned isolated FunASR runtime.
 - [2026/07/31]
   - Support **[MOSS-TTS-v1.5](replication/moss-tts-v1.5.md)** evaluation (`moss-tts-v1.5`), including Seed-TTS-Eval, CV3 zero-shot, and MiniMax multilingual TTS benchmarks (22 languages)
 - [2026/07/27]
@@ -194,6 +196,9 @@ python audio_evals/main.py --dataset sample --model gemini-pro
 # Test Qwen3-ASR speech recognition capability
 CUDA_VISIBLE_DEVICES=0 python audio_evals/main.py --dataset librispeech-test-clean --model qwen3-asr-1.7b --prompt simple-asr
 # See full replication results and commands: replication/qwen3_asr.md
+
+# Test Fun-ASR-Nano multilingual speech recognition capability
+CUDA_VISIBLE_DEVICES=0 python audio_evals/main.py --dataset librispeech-test-clean --model fun-asr-nano-2512 --prompt simple-asr
 
 # Test qwen2-audio-offline speech understanding capability
 CUDA_VISIBLE_DEVICES=0 python audio_evals/main.py --dataset sample --model qwen2-audio-chat
