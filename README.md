@@ -35,6 +35,8 @@ UltraEval-Audio — The world's first open-source framework supporting both spee
 
 # Changelog🔥
 
+- [2026/08/25]
+  - Support **[FireRedTTS3](replication/FireRedTTS3.md)** evaluation (`fireredtts3-base`, `fireredtts3-instruct`), covering Seed-TTS-Eval, MiniMax multilingual TTS (24 languages), and InstructTTSEval
 - [2026/08/12]
   - Support **[Fun-ASR-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512)** evaluation (`fun-asr-nano-2512`) through a pinned isolated FunASR runtime.
 - [2026/07/31]

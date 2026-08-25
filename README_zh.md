@@ -35,6 +35,8 @@ UltraEval-Audio——全球首个同时支持语音理解和语音生成评估�
 
 # 更新日志🔥
 
+- [2026/08/25]
+  - 支持 **[FireRedTTS3](replication/FireRedTTS3.md)** 评测（`fireredtts3-base`, `fireredtts3-instruct`），覆盖 Seed-TTS-Eval、MiniMax 多语言 TTS Benchmark（24 种语言）以及 InstructTTSEval
 - [2026/08/12]
   - 支持 **[Fun-ASR-Nano-2512](https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512)** 评测（`fun-asr-nano-2512`），通过固定版本的隔离 FunASR 运行时加载。
 - [2026/07/31]

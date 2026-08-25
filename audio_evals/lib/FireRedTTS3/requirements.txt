@@ -1,0 +1,12 @@
+einops==0.8.2
+faster-whisper
+fasttext
+python-dotenv
+regex
+soundfile
+# FireRedTTS3's upstream requirements, excluding flash-attn and torchcodec.
+# The runtime patches torchaudio I/O and explicitly selects SDPA.
+torch==2.8.0
+torchaudio==2.8.0
+transformers==5.6.2
+wetext

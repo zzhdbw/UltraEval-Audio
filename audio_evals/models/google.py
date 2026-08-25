@@ -101,7 +101,10 @@ class Gemini(APIModel):
         )
 
         logger.debug("payload: %s", payload)
-        response = requests.post(url, json=payload, headers=headers)
+        # Always bound the request: a socket that never answers would otherwise
+        # wedge the worker forever (the @retry on APIModel.inference only fires
+        # on exceptions, and a hang raises nothing).
+        response = requests.post(url, json=payload, headers=headers, timeout=(10, 300))
         logger.debug("response: %s", response.text)
         if response.status_code == 200:
             msg_data = response.json()
